@@ -1,2 +1,2 @@
 # camSocket
-transferring frames from server to client with socket
+transferring open cv frames from server to client with socket
