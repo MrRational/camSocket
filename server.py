@@ -10,9 +10,10 @@ TCP_PORT = 9501
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # establishing a tcp connection
 sock.bind((TCP_IP, TCP_PORT))
 sock.listen(5)
+print("Listening...")
 
 while True:
-    (client_socket, client_address) = sock.accept() # waiting  for client
+    (client_socket, client_address) = sock.accept()
     print ('connection established with ' +str(client_address))
     cap = cv2.VideoCapture(0)
     while True:
@@ -24,6 +25,9 @@ while True:
             frame = p + frame
             client_socket.sendall(frame)
         
+
+
+
 
 
 
