@@ -3,7 +3,7 @@ import pickle
 import socket
 import struct
 
-TCP_IP = '127.0.0.1'
+TCP_IP = '127.0.0.1' #if needed,change ip accordingly
 TCP_PORT = 9501
 
 
