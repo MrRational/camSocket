@@ -3,13 +3,12 @@ import pickle
 import socket
 import struct
 
-TCP_IP = '127.0.0.1'
+TCP_IP = '127.0.0.1'  #if needed,change ip accordingly
 TCP_PORT = 9501
 server_address = (TCP_IP, TCP_PORT)
-i = 0
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((TCP_IP,TCP_PORT))
+sock.connect((TCP_IP,TCP_PORT)) #connecting to the server..
 data = b''
 payload_size = struct.calcsize("I")
 
@@ -29,6 +28,5 @@ while True:
     cv2.imshow("img",frame)
     if cv2.waitKey(1) == ord("q"):
         break
-    i += 1
 	
 sock.close()
